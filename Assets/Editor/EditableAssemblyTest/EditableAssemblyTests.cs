@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using NSubstitute;
 using NUnit.Framework;
+using OpenLootBox.OpenAssembly.Scripts;
 using UnityEditorInternal;
 using UnityEngine;
-using WorkflowToolkit.EditableAssemblies;
 
 namespace WorkflowToolkit.Editor.EditableAssemblyTest
 {

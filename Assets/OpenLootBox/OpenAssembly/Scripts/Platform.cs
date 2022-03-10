@@ -1,6 +1,6 @@
 using System;
 
-namespace WorkflowToolkit.EditableAssemblies
+namespace OpenLootBox.OpenAssembly.Scripts
 {
     //These are case sensitive. Shouldn't be changed
     [Flags]

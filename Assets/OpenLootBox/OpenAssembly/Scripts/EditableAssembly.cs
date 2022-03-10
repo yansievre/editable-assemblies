@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
+using JetBrains.Annotations;
 using UnityEditor;
 using UnityEditor.Compilation;
 using UnityEditorInternal;
 using UnityEngine;
 
-namespace WorkflowToolkit.EditableAssemblies
+namespace OpenLootBox.OpenAssembly.Scripts
 {
     public enum AssemblyReferenceMode
     {
@@ -94,6 +95,28 @@ namespace WorkflowToolkit.EditableAssemblies
     
     public class EditableAssembly
     {
+        public static EditableAssembly FromAsset([NotNull] AssemblyDefinitionAsset assemblyDefinitionAsset)
+        {
+            return new EditableAssembly(assemblyDefinitionAsset);
+        }
+        /// <summary>
+        /// Will return null if assembly not found
+        /// </summary>
+        /// <param name="assemblyName"></param>
+        /// <returns></returns>
+        public static EditableAssembly FromAssemblyName(string assemblyName)
+        {
+            try
+            {
+                return new EditableAssembly(assemblyName);
+            }
+            catch (Exception e)
+            {
+                // ignored
+            }
+
+            return null;
+        }
         private static Regex _guidRegex = new Regex("(GUID:.*)");
         private MockAssembly _mockAssembly;
         public bool NoEngineReferences
@@ -152,12 +175,12 @@ namespace WorkflowToolkit.EditableAssemblies
             _assemblyPath = definitionAssetPath;
         }
 
-        public EditableAssembly(AssemblyDefinitionAsset definitionAsset) : this(definitionAsset.text,AssetDatabase.GetAssetPath(definitionAsset))
+        private EditableAssembly(AssemblyDefinitionAsset definitionAsset) : this(definitionAsset.text,AssetDatabase.GetAssetPath(definitionAsset))
         {
         }
         
       
-        public EditableAssembly(string definitionAssetName)
+        private EditableAssembly(string definitionAssetName)
         {
             _assemblyPath = CompilationPipeline.GetAssemblyDefinitionFilePathFromAssemblyName(definitionAssetName);
             var asset = AssetDatabase.LoadAssetAtPath<AssemblyDefinitionAsset>(_assemblyPath);

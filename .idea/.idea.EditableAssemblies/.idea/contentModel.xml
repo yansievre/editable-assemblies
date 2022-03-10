@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\yansi\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\yansi\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_EditableAssemblies.75777981.00" t="ExcludeRecursive" />
+    <e p="D:\Github\EditableAssemblies" t="IncludeRecursive">
+      <e p="Assets" t="Include">
+        <e p="Editor" t="Include">
+          <e p="EditableAssemblyTest" t="Include">
+            <e p="EditableAssemblyTest.asmdef" t="Include" />
+            <e p="EditableAssemblyTests.cs" t="Include" />
+          </e>
+        </e>
+        <e p="OpenLootBox" t="Include">
+          <e p="OpenAssembly" t="Include">
+            <e p="EditableAssembly.Editor.asmdef" t="Include" />
+            <e p="Example" t="Include">
+              <e p="ExampleScript.cs" t="Include" />
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="EditableAssembly.cs" t="Include" />
+              <e p="Platform.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="EditableAssemblies.sln" t="IncludeFlat" />
+      <e p="EditableAssembly.Editor.csproj" t="IncludeRecursive" />
+      <e p="EditableAssemblyTest.csproj" t="IncludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\Bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
