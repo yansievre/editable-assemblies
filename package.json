@@ -1,0 +1,19 @@
+{
+  "name": "com.openlootbox.editable-assemblies",
+  "displayName": "Editable Assemblies",
+  "description": "Provides a wrapper that allows you to edit AssemblyDefinitionAsset files in Editor scripts.\n\n",
+  "gitTagPrefix": "v",
+  "version": "v1.0.0",
+  "type": "utilities",
+  "minVersion": "v1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yansievre/editable-assemblies"
+  },
+  "author": "yansievre",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yansievre/editable-assemblies/issues"
+  },
+  "homepage": "https://github.com/yansievre/editable-assemblies#readme"
+}
